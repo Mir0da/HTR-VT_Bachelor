@@ -1,0 +1,12 @@
+# Datenordner mit zu großen Bilddateien ausschließen
+lines/
+data/lines/
+data/**/*.png
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+.env/
+.venv/

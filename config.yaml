@@ -1,0 +1,31 @@
+# config.yaml
+data:
+  csv_path: data/iam_lines.csv              # Pfad zur CSV mit path/text
+  charset_path: data/charset.txt            # Pfad zur generierten charset-Datei
+  train_list: data/train.ln
+  val_list: data/val.ln
+  test_list: data/test.ln
+  image_height: 64
+  image_width: 1024                         # Kann je nach Dataset angepasst werden
+  augmentation: true
+
+train:
+  epochs: 50
+  batch_size: 16
+  learning_rate: 0.0003
+  save_dir: checkpoints/
+  workers: 4                                # Threads für Datenladen
+  amp: true                                 # Mixed Precision (optional)
+
+model:
+  name: vit
+  patch_size: [4, 8]
+  dim: 384
+  depth: 6
+  heads: 6
+  mlp_dim: 768
+  dropout: 0.1
+  emb_dropout: 0.1
+
+loss:
+  type: ctc
