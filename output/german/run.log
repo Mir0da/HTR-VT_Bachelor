@@ -1,0 +1,985 @@
+2025-06-08 20:06:29,405 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 20:06:29,828 INFO total_param is 53486096
+2025-06-08 20:06:30,021 INFO Loading train loader...
+2025-06-08 20:06:33,628 INFO Loading val loader...
+2025-06-08 20:06:37,034 INFO Iter : 1 	 LR : 0.00000 	 training loss : 411.70850 	 
+2025-06-08 20:06:38,042 INFO Iter : 2 	 LR : 0.00000 	 training loss : nan 	 
+2025-06-08 20:06:39,024 INFO Iter : 3 	 LR : 0.00000 	 training loss : nan 	 
+2025-06-08 20:06:39,949 INFO Iter : 4 	 LR : 0.00000 	 training loss : nan 	 
+2025-06-08 20:06:40,930 INFO Iter : 5 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:41,912 INFO Iter : 6 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:42,818 INFO Iter : 7 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:43,815 INFO Iter : 8 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:44,807 INFO Iter : 9 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:45,726 INFO Iter : 10 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:46,679 INFO Iter : 11 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:47,685 INFO Iter : 12 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:48,647 INFO Iter : 13 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:49,640 INFO Iter : 14 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 20:06:50,550 INFO Iter : 15 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:06:51,448 INFO Iter : 16 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:06:52,371 INFO Iter : 17 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:06:53,273 INFO Iter : 18 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:06:54,260 INFO Iter : 19 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:06:55,249 INFO Iter : 20 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:06:56,257 INFO Iter : 21 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 20:43:53,429 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 20:43:53,866 INFO total_param is 53486096
+2025-06-08 20:43:54,071 INFO Loading train loader...
+2025-06-08 20:43:57,699 INFO Loading val loader...
+2025-06-08 20:47:39,860 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 20:47:40,307 INFO total_param is 53486096
+2025-06-08 20:47:40,517 INFO Loading train loader...
+2025-06-08 20:47:44,042 INFO Loading val loader...
+2025-06-08 20:48:33,962 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 20:48:34,398 INFO total_param is 53486096
+2025-06-08 20:48:34,597 INFO Loading train loader...
+2025-06-08 20:48:38,009 INFO Loading val loader...
+2025-06-08 20:50:50,868 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 20:50:51,303 INFO total_param is 53486096
+2025-06-08 20:50:51,495 INFO Loading train loader...
+2025-06-08 20:50:55,119 INFO Loading val loader...
+2025-06-08 20:52:41,908 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 20:52:42,337 INFO total_param is 53486096
+2025-06-08 20:52:42,523 INFO Loading train loader...
+2025-06-08 20:52:45,886 INFO Loading val loader...
+2025-06-08 21:02:25,095 INFO {
+    "alpha": 1.0,
+    "attn_mask_ratio": 0.1,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 2,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        512,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.4,
+    "max_lr": 0.001,
+    "max_span_length": 8,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        32
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.5,
+    "proj": 8.0,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 32,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 8,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 1000,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 21:02:25,532 INFO total_param is 53486096
+2025-06-08 21:02:25,725 INFO Loading train loader...
+2025-06-08 21:02:29,155 INFO Loading val loader...
+2025-06-08 21:02:31,029 INFO Iter : 1 	 LR : 0.00000 	 training loss : 419.51126 	 
+2025-06-08 21:02:32,016 INFO Iter : 2 	 LR : 0.00000 	 training loss : nan 	 
+2025-06-08 21:02:32,944 INFO Iter : 3 	 LR : 0.00000 	 training loss : nan 	 
+2025-06-08 21:02:34,427 INFO Iter : 4 	 LR : 0.00000 	 training loss : nan 	 
+2025-06-08 21:02:35,376 INFO Iter : 5 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:36,326 INFO Iter : 6 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:37,377 INFO Iter : 7 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:38,361 INFO Iter : 8 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:39,403 INFO Iter : 9 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:40,436 INFO Iter : 10 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:41,366 INFO Iter : 11 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:42,338 INFO Iter : 12 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:43,357 INFO Iter : 13 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:44,348 INFO Iter : 14 	 LR : 0.00001 	 training loss : nan 	 
+2025-06-08 21:02:45,389 INFO Iter : 15 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:46,358 INFO Iter : 16 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:47,326 INFO Iter : 17 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:48,293 INFO Iter : 18 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:49,356 INFO Iter : 19 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:50,312 INFO Iter : 20 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:51,298 INFO Iter : 21 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:52,316 INFO Iter : 22 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:53,306 INFO Iter : 23 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:54,375 INFO Iter : 24 	 LR : 0.00002 	 training loss : nan 	 
+2025-06-08 21:02:55,333 INFO Iter : 25 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:02:56,294 INFO Iter : 26 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:02:57,271 INFO Iter : 27 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:02:58,327 INFO Iter : 28 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:02:59,370 INFO Iter : 29 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:03:00,425 INFO Iter : 30 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:03:01,502 INFO Iter : 31 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:03:02,456 INFO Iter : 32 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:03:03,509 INFO Iter : 33 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:03:04,474 INFO Iter : 34 	 LR : 0.00003 	 training loss : nan 	 
+2025-06-08 21:03:05,490 INFO Iter : 35 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:06,529 INFO Iter : 36 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:07,602 INFO Iter : 37 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:08,660 INFO Iter : 38 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:09,698 INFO Iter : 39 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:10,656 INFO Iter : 40 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:11,736 INFO Iter : 41 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:12,799 INFO Iter : 42 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:13,775 INFO Iter : 43 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:14,770 INFO Iter : 44 	 LR : 0.00004 	 training loss : nan 	 
+2025-06-08 21:03:15,726 INFO Iter : 45 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:16,754 INFO Iter : 46 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:17,699 INFO Iter : 47 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:18,664 INFO Iter : 48 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:19,780 INFO Iter : 49 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:20,775 INFO Iter : 50 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:21,738 INFO Iter : 51 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:22,682 INFO Iter : 52 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:23,651 INFO Iter : 53 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:24,627 INFO Iter : 54 	 LR : 0.00005 	 training loss : nan 	 
+2025-06-08 21:03:25,666 INFO Iter : 55 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:26,719 INFO Iter : 56 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:27,805 INFO Iter : 57 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:28,858 INFO Iter : 58 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:29,891 INFO Iter : 59 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:30,843 INFO Iter : 60 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:31,907 INFO Iter : 61 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:32,946 INFO Iter : 62 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:33,967 INFO Iter : 63 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:34,994 INFO Iter : 64 	 LR : 0.00006 	 training loss : nan 	 
+2025-06-08 21:03:36,132 INFO Iter : 65 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:37,594 INFO Iter : 66 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:38,760 INFO Iter : 67 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:39,802 INFO Iter : 68 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:40,813 INFO Iter : 69 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:41,803 INFO Iter : 70 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:42,909 INFO Iter : 71 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:43,959 INFO Iter : 72 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:44,941 INFO Iter : 73 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:46,009 INFO Iter : 74 	 LR : 0.00007 	 training loss : nan 	 
+2025-06-08 21:03:47,073 INFO Iter : 75 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:48,045 INFO Iter : 76 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:49,126 INFO Iter : 77 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:50,079 INFO Iter : 78 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:51,163 INFO Iter : 79 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:52,224 INFO Iter : 80 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:53,248 INFO Iter : 81 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:54,279 INFO Iter : 82 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:55,260 INFO Iter : 83 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:56,316 INFO Iter : 84 	 LR : 0.00008 	 training loss : nan 	 
+2025-06-08 21:03:57,361 INFO Iter : 85 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:03:58,415 INFO Iter : 86 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:03:59,401 INFO Iter : 87 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:00,436 INFO Iter : 88 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:01,469 INFO Iter : 89 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:02,491 INFO Iter : 90 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:03,528 INFO Iter : 91 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:04,486 INFO Iter : 92 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:05,522 INFO Iter : 93 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:06,496 INFO Iter : 94 	 LR : 0.00009 	 training loss : nan 	 
+2025-06-08 21:04:07,503 INFO Iter : 95 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:08,467 INFO Iter : 96 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:09,573 INFO Iter : 97 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:10,623 INFO Iter : 98 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:11,651 INFO Iter : 99 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:12,683 INFO Iter : 100 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:13,641 INFO Iter : 101 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:14,595 INFO Iter : 102 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:15,677 INFO Iter : 103 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:16,748 INFO Iter : 104 	 LR : 0.00010 	 training loss : nan 	 
+2025-06-08 21:04:17,747 INFO Iter : 105 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:18,698 INFO Iter : 106 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:19,770 INFO Iter : 107 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:20,855 INFO Iter : 108 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:21,837 INFO Iter : 109 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:22,896 INFO Iter : 110 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:23,835 INFO Iter : 111 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:24,906 INFO Iter : 112 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:25,905 INFO Iter : 113 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:26,868 INFO Iter : 114 	 LR : 0.00011 	 training loss : nan 	 
+2025-06-08 21:04:27,876 INFO Iter : 115 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:28,825 INFO Iter : 116 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:29,788 INFO Iter : 117 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:30,773 INFO Iter : 118 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:31,793 INFO Iter : 119 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:32,841 INFO Iter : 120 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:33,879 INFO Iter : 121 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:34,877 INFO Iter : 122 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:35,909 INFO Iter : 123 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:36,853 INFO Iter : 124 	 LR : 0.00012 	 training loss : nan 	 
+2025-06-08 21:04:37,838 INFO Iter : 125 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:38,886 INFO Iter : 126 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:39,932 INFO Iter : 127 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:41,074 INFO Iter : 128 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:42,097 INFO Iter : 129 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:43,224 INFO Iter : 130 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:44,315 INFO Iter : 131 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:45,299 INFO Iter : 132 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:46,367 INFO Iter : 133 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:47,454 INFO Iter : 134 	 LR : 0.00013 	 training loss : nan 	 
+2025-06-08 21:04:48,464 INFO Iter : 135 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:49,506 INFO Iter : 136 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:50,590 INFO Iter : 137 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:51,545 INFO Iter : 138 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:52,543 INFO Iter : 139 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:53,587 INFO Iter : 140 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:54,688 INFO Iter : 141 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:55,723 INFO Iter : 142 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:56,840 INFO Iter : 143 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:57,909 INFO Iter : 144 	 LR : 0.00014 	 training loss : nan 	 
+2025-06-08 21:04:59,047 INFO Iter : 145 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:00,102 INFO Iter : 146 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:01,105 INFO Iter : 147 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:02,223 INFO Iter : 148 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:03,293 INFO Iter : 149 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:04,411 INFO Iter : 150 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:05,422 INFO Iter : 151 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:06,509 INFO Iter : 152 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:07,519 INFO Iter : 153 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:08,583 INFO Iter : 154 	 LR : 0.00015 	 training loss : nan 	 
+2025-06-08 21:05:09,727 INFO Iter : 155 	 LR : 0.00016 	 training loss : nan 	 
+2025-06-08 21:05:10,749 INFO Iter : 156 	 LR : 0.00016 	 training loss : nan 	 
+2025-06-08 21:05:11,902 INFO Iter : 157 	 LR : 0.00016 	 training loss : nan 	 
+2025-06-08 21:05:12,917 INFO Iter : 158 	 LR : 0.00016 	 training loss : nan 	 
+2025-06-08 21:09:23,646 INFO {
+    "alpha": 0,
+    "attn_mask_ratio": 0.0,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 0,
+    "dila_ero_max_kernel": 1,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        1024,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.0,
+    "max_lr": 0.0001,
+    "max_span_length": 4,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        16
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.0,
+    "proj": 8,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 8,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 4,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 0,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 21:09:24,081 INFO total_param is 53584400
+2025-06-08 21:09:24,275 INFO Loading train loader...
+2025-06-08 21:09:27,643 INFO Loading val loader...
+2025-06-08 21:09:29,387 INFO Iter : 1 	 LR : 0.00010 	 training loss : 791.38580 	 
+2025-06-08 21:09:29,954 INFO Iter : 2 	 LR : 0.00010 	 training loss : 591.80286 	 
+2025-06-08 21:09:30,483 INFO Iter : 3 	 LR : 0.00010 	 training loss : 481.95441 	 
+2025-06-08 21:09:31,001 INFO Iter : 4 	 LR : 0.00010 	 training loss : 453.86774 	 
+2025-06-08 21:09:31,552 INFO Iter : 5 	 LR : 0.00010 	 training loss : 451.16565 	 
+2025-06-08 21:09:32,090 INFO Iter : 6 	 LR : 0.00010 	 training loss : 520.37122 	 
+2025-06-08 21:09:32,653 INFO Iter : 7 	 LR : 0.00010 	 training loss : 366.54022 	 
+2025-06-08 21:09:33,172 INFO Iter : 8 	 LR : 0.00010 	 training loss : 361.94775 	 
+2025-06-08 21:09:33,676 INFO Iter : 9 	 LR : 0.00010 	 training loss : 348.14948 	 
+2025-06-08 21:09:34,179 INFO Iter : 10 	 LR : 0.00010 	 training loss : 490.74588 	 
+2025-06-08 21:09:34,686 INFO Iter : 11 	 LR : 0.00010 	 training loss : 367.60431 	 
+2025-06-08 21:09:35,193 INFO Iter : 12 	 LR : 0.00010 	 training loss : 355.51025 	 
+2025-06-08 21:09:35,715 INFO Iter : 13 	 LR : 0.00010 	 training loss : 449.86923 	 
+2025-06-08 21:09:36,233 INFO Iter : 14 	 LR : 0.00010 	 training loss : 457.60312 	 
+2025-06-08 21:09:36,757 INFO Iter : 15 	 LR : 0.00010 	 training loss : 390.73737 	 
+2025-06-08 21:09:37,273 INFO Iter : 16 	 LR : 0.00010 	 training loss : 363.00146 	 
+2025-06-08 21:09:37,787 INFO Iter : 17 	 LR : 0.00010 	 training loss : 452.28137 	 
+2025-06-08 21:09:38,315 INFO Iter : 18 	 LR : 0.00010 	 training loss : 403.77759 	 
+2025-06-08 21:09:38,813 INFO Iter : 19 	 LR : 0.00010 	 training loss : 421.54175 	 
+2025-06-08 21:09:39,315 INFO Iter : 20 	 LR : 0.00010 	 training loss : 452.47922 	 
+2025-06-08 21:09:39,853 INFO Iter : 21 	 LR : 0.00010 	 training loss : 395.91693 	 
+2025-06-08 21:09:40,386 INFO Iter : 22 	 LR : 0.00010 	 training loss : 387.77271 	 
+2025-06-08 21:09:40,890 INFO Iter : 23 	 LR : 0.00010 	 training loss : 340.43408 	 
+2025-06-08 21:09:41,427 INFO Iter : 24 	 LR : 0.00010 	 training loss : 416.85645 	 
+2025-06-08 21:09:41,938 INFO Iter : 25 	 LR : 0.00010 	 training loss : 403.97018 	 
+2025-06-08 21:09:42,472 INFO Iter : 26 	 LR : 0.00010 	 training loss : 416.69775 	 
+2025-06-08 21:09:42,978 INFO Iter : 27 	 LR : 0.00010 	 training loss : 283.86188 	 
+2025-06-08 21:09:43,488 INFO Iter : 28 	 LR : 0.00010 	 training loss : 369.50589 	 
+2025-06-08 21:09:44,010 INFO Iter : 29 	 LR : 0.00010 	 training loss : 327.97974 	 
+2025-06-08 21:09:44,496 INFO Iter : 30 	 LR : 0.00010 	 training loss : 261.39691 	 
+2025-06-08 21:09:45,002 INFO Iter : 31 	 LR : 0.00010 	 training loss : 357.54611 	 
+2025-06-08 21:09:45,531 INFO Iter : 32 	 LR : 0.00010 	 training loss : 335.80109 	 
+2025-06-08 21:09:46,046 INFO Iter : 33 	 LR : 0.00010 	 training loss : 292.85760 	 
+2025-06-08 21:09:46,589 INFO Iter : 34 	 LR : 0.00010 	 training loss : 364.22577 	 
+2025-06-08 21:09:47,080 INFO Iter : 35 	 LR : 0.00010 	 training loss : 359.05249 	 
+2025-06-08 21:09:47,599 INFO Iter : 36 	 LR : 0.00010 	 training loss : 331.65924 	 
+2025-06-08 21:09:48,090 INFO Iter : 37 	 LR : 0.00010 	 training loss : 285.82788 	 
+2025-06-08 21:09:48,614 INFO Iter : 38 	 LR : 0.00010 	 training loss : 314.41611 	 
+2025-06-08 21:09:49,135 INFO Iter : 39 	 LR : 0.00010 	 training loss : 317.12149 	 
+2025-06-08 21:09:49,621 INFO Iter : 40 	 LR : 0.00010 	 training loss : 253.42545 	 
+2025-06-08 21:09:50,150 INFO Iter : 41 	 LR : 0.00010 	 training loss : 197.21500 	 
+2025-06-08 21:09:50,694 INFO Iter : 42 	 LR : 0.00010 	 training loss : 308.68842 	 
+2025-06-08 21:09:51,191 INFO Iter : 43 	 LR : 0.00010 	 training loss : 200.55286 	 
+2025-06-08 21:09:51,721 INFO Iter : 44 	 LR : 0.00010 	 training loss : 234.29326 	 
+2025-06-08 21:09:52,274 INFO Iter : 45 	 LR : 0.00010 	 training loss : 247.29407 	 
+2025-06-08 21:09:52,783 INFO Iter : 46 	 LR : 0.00010 	 training loss : 219.47870 	 
+2025-06-08 21:09:53,289 INFO Iter : 47 	 LR : 0.00010 	 training loss : 201.03542 	 
+2025-06-08 21:09:53,788 INFO Iter : 48 	 LR : 0.00010 	 training loss : 179.68604 	 
+2025-06-08 21:09:54,299 INFO Iter : 49 	 LR : 0.00010 	 training loss : 206.40167 	 
+2025-06-08 21:09:54,823 INFO Iter : 50 	 LR : 0.00010 	 training loss : 180.84747 	 
+2025-06-08 21:09:55,346 INFO Iter : 51 	 LR : 0.00010 	 training loss : 194.86809 	 
+2025-06-08 21:09:55,854 INFO Iter : 52 	 LR : 0.00010 	 training loss : 240.18692 	 
+2025-06-08 21:09:56,357 INFO Iter : 53 	 LR : 0.00010 	 training loss : 188.63348 	 
+2025-06-08 21:09:56,866 INFO Iter : 54 	 LR : 0.00010 	 training loss : 159.31888 	 
+2025-06-08 21:09:57,365 INFO Iter : 55 	 LR : 0.00010 	 training loss : 196.15225 	 
+2025-06-08 21:09:57,903 INFO Iter : 56 	 LR : 0.00010 	 training loss : 176.24229 	 
+2025-06-08 21:09:58,400 INFO Iter : 57 	 LR : 0.00010 	 training loss : 162.53221 	 
+2025-06-08 21:09:58,929 INFO Iter : 58 	 LR : 0.00010 	 training loss : 164.89409 	 
+2025-06-08 21:09:59,431 INFO Iter : 59 	 LR : 0.00010 	 training loss : 168.71193 	 
+2025-06-08 21:09:59,927 INFO Iter : 60 	 LR : 0.00010 	 training loss : 230.39580 	 
+2025-06-08 21:10:00,443 INFO Iter : 61 	 LR : 0.00010 	 training loss : 150.17804 	 
+2025-06-08 21:10:00,975 INFO Iter : 62 	 LR : 0.00010 	 training loss : 132.18262 	 
+2025-06-08 21:10:01,523 INFO Iter : 63 	 LR : 0.00010 	 training loss : 150.38564 	 
+2025-06-08 21:10:02,048 INFO Iter : 64 	 LR : 0.00010 	 training loss : 171.65918 	 
+2025-06-08 21:10:02,589 INFO Iter : 65 	 LR : 0.00010 	 training loss : 153.75339 	 
+2025-06-08 21:10:03,128 INFO Iter : 66 	 LR : 0.00010 	 training loss : 158.14445 	 
+2025-06-08 21:10:03,712 INFO Iter : 67 	 LR : 0.00010 	 training loss : 146.76488 	 
+2025-06-08 21:10:04,251 INFO Iter : 68 	 LR : 0.00010 	 training loss : 191.73709 	 
+2025-06-08 21:10:04,768 INFO Iter : 69 	 LR : 0.00010 	 training loss : 201.60876 	 
+2025-06-08 21:10:05,317 INFO Iter : 70 	 LR : 0.00010 	 training loss : 157.35251 	 
+2025-06-08 21:10:05,859 INFO Iter : 71 	 LR : 0.00010 	 training loss : 195.93631 	 
+2025-06-08 21:10:06,383 INFO Iter : 72 	 LR : 0.00010 	 training loss : 149.74042 	 
+2025-06-08 21:10:06,925 INFO Iter : 73 	 LR : 0.00010 	 training loss : 154.61319 	 
+2025-06-08 21:10:07,416 INFO Iter : 74 	 LR : 0.00010 	 training loss : 156.34123 	 
+2025-06-08 21:10:07,911 INFO Iter : 75 	 LR : 0.00010 	 training loss : 139.07016 	 
+2025-06-08 21:10:08,418 INFO Iter : 76 	 LR : 0.00010 	 training loss : 170.99231 	 
+2025-06-08 21:10:08,947 INFO Iter : 77 	 LR : 0.00010 	 training loss : 197.52939 	 
+2025-06-08 21:10:09,487 INFO Iter : 78 	 LR : 0.00010 	 training loss : 132.72733 	 
+2025-06-08 21:10:10,029 INFO Iter : 79 	 LR : 0.00010 	 training loss : 171.25183 	 
+2025-06-08 21:10:10,542 INFO Iter : 80 	 LR : 0.00010 	 training loss : 134.01025 	 
+2025-06-08 21:10:11,027 INFO Iter : 81 	 LR : 0.00010 	 training loss : 134.48479 	 
+2025-06-08 21:10:11,549 INFO Iter : 82 	 LR : 0.00010 	 training loss : 114.59720 	 
+2025-06-08 21:10:12,098 INFO Iter : 83 	 LR : 0.00010 	 training loss : 138.66713 	 
+2025-06-08 21:10:12,659 INFO Iter : 84 	 LR : 0.00010 	 training loss : 132.15622 	 
+2025-06-08 21:10:13,146 INFO Iter : 85 	 LR : 0.00010 	 training loss : 138.34756 	 
+2025-06-08 21:10:13,655 INFO Iter : 86 	 LR : 0.00010 	 training loss : 152.60167 	 
+2025-06-08 21:10:14,136 INFO Iter : 87 	 LR : 0.00010 	 training loss : 165.66553 	 
+2025-06-08 21:10:14,663 INFO Iter : 88 	 LR : 0.00010 	 training loss : 141.62238 	 
+2025-06-08 21:10:15,159 INFO Iter : 89 	 LR : 0.00010 	 training loss : 123.80276 	 
+2025-06-08 21:10:15,700 INFO Iter : 90 	 LR : 0.00010 	 training loss : 146.01184 	 
+2025-06-08 21:10:16,243 INFO Iter : 91 	 LR : 0.00010 	 training loss : 149.94476 	 
+2025-06-08 21:10:16,783 INFO Iter : 92 	 LR : 0.00010 	 training loss : 136.44185 	 
+2025-06-08 21:10:17,316 INFO Iter : 93 	 LR : 0.00010 	 training loss : 139.08842 	 
+2025-06-08 21:16:11,539 INFO {
+    "alpha": 0,
+    "attn_mask_ratio": 0.05,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "dila_ero_iter": 1,
+    "dila_ero_max_kernel": 3,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        1024,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.2,
+    "max_lr": 0.0001,
+    "max_span_length": 4,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        16
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 100,
+    "proba": 0.2,
+    "proj": 8,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": null,
+    "total_iter": 100000,
+    "train_bs": 8,
+    "use_wandb": false,
+    "val_bs": 4,
+    "warm_up_iter": 0,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 21:17:01,589 INFO {
+    "alpha": 0,
+    "attn_mask_ratio": 0.05,
+    "blur_max_kernel": 5,
+    "blur_max_sigma": 5,
+    "blur_min_kernel": 3,
+    "blur_min_sigma": 3,
+    "cos_temp": 8,
+    "data_path": "./data/german/lines/",
+    "dila_ero_iter": 0,
+    "dila_ero_max_kernel": 1,
+    "dpi_max_factor": 1.5,
+    "dpi_min_factor": 0.5,
+    "elastic_distortion_max_alpha": 1,
+    "elastic_distortion_max_kernel_size": 3,
+    "elastic_distortion_max_magnitude": 20,
+    "elastic_distortion_max_sigma": 10,
+    "elastic_distortion_min_alpha": 0.5,
+    "elastic_distortion_min_kernel_size": 3,
+    "elastic_distortion_min_sigma": 1,
+    "ema_decay": 0.9999,
+    "eval_iter": 1000,
+    "exp_name": "german",
+    "img_size": [
+        1024,
+        64
+    ],
+    "jitter_brightness": 0.4,
+    "jitter_contrast": 0.4,
+    "jitter_hue": 0.2,
+    "jitter_saturation": 0.4,
+    "mask_ratio": 0.2,
+    "max_lr": 0.0001,
+    "max_span_length": 4,
+    "nb_cls": 80,
+    "num_workers": 0,
+    "out_dir": "./output",
+    "patch_size": [
+        4,
+        16
+    ],
+    "perspective_high": 0.4,
+    "perspective_low": 0.0,
+    "print_iter": 1,
+    "proba": 0.2,
+    "proj": 8,
+    "save_dir": "./output\\german",
+    "seed": 123,
+    "sharpen_max_alpha": 1,
+    "sharpen_max_strength": 1,
+    "sharpen_min_alpha": 0,
+    "sharpen_min_strength": 0,
+    "spacing": 0,
+    "subcommand": "GERMAN",
+    "test_data_list": "./data/german/test.ln",
+    "total_iter": 100000,
+    "train_bs": 8,
+    "train_data_list": "./data/german/train.ln",
+    "use_wandb": false,
+    "val_bs": 4,
+    "val_data_list": "./data/german/val.ln",
+    "warm_up_iter": 0,
+    "weight_decay": 0.5,
+    "zoom_max_h": 1,
+    "zoom_max_w": 1,
+    "zoom_min_h": 0.8,
+    "zoom_min_w": 0.99
+}
+2025-06-08 21:17:02,018 INFO total_param is 53584400
+2025-06-08 21:17:02,200 INFO Loading train loader...
+2025-06-08 21:17:05,578 INFO Loading val loader...
+2025-06-08 21:17:07,288 INFO Iter : 1 	 LR : 0.00010 	 training loss : 799.27185 	 
+2025-06-08 21:17:07,786 INFO Iter : 2 	 LR : 0.00010 	 training loss : 528.45520 	 
+2025-06-08 21:17:08,297 INFO Iter : 3 	 LR : 0.00010 	 training loss : 423.79391 	 
+2025-06-08 21:17:08,823 INFO Iter : 4 	 LR : 0.00010 	 training loss : 424.26068 	 
+2025-06-08 21:17:09,357 INFO Iter : 5 	 LR : 0.00010 	 training loss : 329.25250 	 
+2025-06-08 21:17:09,873 INFO Iter : 6 	 LR : 0.00010 	 training loss : 420.06714 	 
+2025-06-08 21:17:10,364 INFO Iter : 7 	 LR : 0.00010 	 training loss : 195.56920 	 
+2025-06-08 21:17:10,849 INFO Iter : 8 	 LR : 0.00010 	 training loss : 188.26082 	 
+2025-06-08 21:17:11,349 INFO Iter : 9 	 LR : 0.00010 	 training loss : 183.09743 	 
+2025-06-08 21:17:11,809 INFO Iter : 10 	 LR : 0.00010 	 training loss : 377.02966 	 
+2025-06-08 21:17:12,295 INFO Iter : 11 	 LR : 0.00010 	 training loss : 200.87454 	 

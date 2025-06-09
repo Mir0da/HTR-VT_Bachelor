@@ -68,7 +68,11 @@ def main():
 
     optimizer = sam.SAM(model.parameters(), torch.optim.AdamW, lr=1e-7, betas=(0.9, 0.99), weight_decay=args.weight_decay)
     criterion = torch.nn.CTCLoss(reduction='none', zero_infinity=True)
-    converter = utils.CTCLabelConverter(train_dataset.ralph.values())
+    if args.subcommand == "GERMAN":
+        charset = list(" !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz{|}°´ÄÖÜßäéöü–€\"")
+        converter = utils.CTCLabelConverter(charset)
+    else:
+        converter = utils.CTCLabelConverter(train_dataset.ralph.values())
 
     best_cer, best_wer = 1e+6, 1e+6
     train_loss = 0.0

@@ -13,6 +13,7 @@ python3 train.py --exp-name iam \
 --proba 0.5 \
 --alpha 1 \
 --total-iter 100000 \
+--print-iter 1 \
 IAM
 
 python3 test.py --exp-name iam \
@@ -30,4 +31,5 @@ python3 test.py --exp-name iam \
 --proba 0.5 \
 --alpha 1 \
 --total-iter 100000 \
+--print-iter 1 \
 IAM

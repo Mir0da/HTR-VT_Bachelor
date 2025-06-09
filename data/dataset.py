@@ -112,7 +112,8 @@ def get_labels(fnames):
     labels = []
     for id, image_file in enumerate(fnames):
         fn = os.path.splitext(image_file)[0] + '.txt'
-        lbl = open(fn, 'r').read()
+        with open(fn, 'r', encoding='utf-8') as f:
+            lbl = f.read()
         lbl = ' '.join(lbl.split())  # remove linebreaks if present
 
         labels.append(lbl)

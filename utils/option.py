@@ -114,4 +114,20 @@ def get_args_parser():
                      help='test data list')
     LAM.add_argument('--nb-cls', default=90, type=int, help='nb of classes, IAM=79+1, READ2016=89+1')
 
+    GERMAN = subparsers.add_parser("GERMAN",
+                                   description='Dataset parser for training on German handwriting',
+                                   add_help=True,
+                                   formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+                                   help="Dataset parser for training on German handwriting")
+
+    GERMAN.add_argument('--train-data-list', type=str, default='./data/german/train.ln',
+                        help='train data list')
+    GERMAN.add_argument('--data-path', type=str, default='./data/german/lines/',
+                        help='data path')
+    GERMAN.add_argument('--val-data-list', type=str, default='./data/german/val.ln',
+                        help='val data list')
+    GERMAN.add_argument('--test-data-list', type=str, default='./data/german/test.ln',
+                        help='test data list')
+    GERMAN.add_argument('--nb-cls', default=80, type=int, help='nb of classes')
+
     return parser.parse_args()
