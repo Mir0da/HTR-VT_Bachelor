@@ -1,6 +1,6 @@
 python3 train.py --exp-name iam \
 --max-lr 1e-3 \
---train-bs 128 \
+--train-bs 64 \
 --val-bs 8 \
 --weight-decay 0.5 \
 --mask-ratio 0.4 \

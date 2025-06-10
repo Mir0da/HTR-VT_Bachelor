@@ -10,3 +10,6 @@ __pycache__/
 *.ipynb_checkpoints/
 .env/
 .venv/
+data/iam/lines.tgz
+output/german/events.out.tfevents.1749580099.SRLab-ML2.11480.0
+output/german/events.out.tfevents.1749579962.SRLab-ML2.7680.0

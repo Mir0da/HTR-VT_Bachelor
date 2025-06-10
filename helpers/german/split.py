@@ -2,7 +2,7 @@ from pathlib import Path
 import random
 
 # 🔁 Anpassen:
-lines_dir = Path("C:/Users/sophi/Documents/Bachelor/Datasets/german/lines")
+lines_dir = Path("C:/Users/User/Documents/GitHub/HTR-VT_Bachelor/data/german/lines")
 output_dir = lines_dir.parent  # schreibt .ln-Dateien nach /german/
 
 # Alle PNG-Dateien sammeln

@@ -2,7 +2,7 @@ from pathlib import Path
 import pandas as pd
 
 # 🔁 Anpassen:
-CSV_PATH = Path("C:/Users/SRLab-ML1/Documents/GitHub/HTR-VT_Bachelor/data/iam/ascii/iam_linesUNI.csv")
+CSV_PATH = Path("C:/Users/User/Documents/GitHub/HTR-VT_Bachelor/data/iam/ascii/iam_linesUNI2.csv")
 TXT_FOLDER = Path("/data/iam/lines")  # gleiche wie für die Bilder
 
 TXT_FOLDER.mkdir(parents=True, exist_ok=True)

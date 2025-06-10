@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\SRLab-ML1\Documents\GitHub\HTR-VT_Bachelor\venv"
+VIRTUAL_ENV="C:\Users\User\Documents\GitHub\HTR-VT_Bachelor\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
