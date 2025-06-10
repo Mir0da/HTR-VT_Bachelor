@@ -1,6 +1,8 @@
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
+numpy<2
+torch==2.7.1+cu118
+torchvision==0.18.1+cu118
+torchaudio==2.7.1+cu118
+pillow
 albumentations
 wandb
 timm
@@ -8,4 +10,7 @@ opencv-python
 scikit-image
 editdistance
 tensorboard
-
+matplotlib
+tqdm
+datasets
+pyyaml

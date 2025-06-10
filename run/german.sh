@@ -13,5 +13,5 @@ python train.py --exp-name german \
 --proba 0.5 \
 --alpha 1 \
 --total-iter 100000 \
---print-iter 1 \
+--print-iter 100 \
 GERMAN

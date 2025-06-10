@@ -2,7 +2,7 @@ from datasets import load_dataset
 from pathlib import Path
 
 # Zielordner
-output_path = Path("C:/Users/sophi/Documents/Bachelor/Datasets/german/lines")
+output_path = Path("C:/Users/SRLab-ML1/Documents/GitHub/HTR-VT_Bachelor/data/german/lines")
 output_path.mkdir(parents=True, exist_ok=True)
 
 # Lade und mische Datensatz
