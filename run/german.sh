@@ -7,6 +7,7 @@ python train.py --exp-name german \
 --attn-mask-ratio 0.1 \
 --max-span-length 8 \
 --img-size 1024 64 \
+<<<<<<< Updated upstream
 --patch-size 4 16
 =======
 --patch-size 4 16 \
