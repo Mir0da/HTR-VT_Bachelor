@@ -128,6 +128,6 @@ def get_args_parser():
                         help='val data list')
     GERMAN.add_argument('--test-data-list', type=str, default='./data/german/test.ln',
                         help='test data list')
-    GERMAN.add_argument('--nb-cls', default=80, type=int, help='nb of classes')
+    GERMAN.add_argument('--nb-cls', default=106, type=int, help='nb of classes, GERMAN=105+1')
 
     return parser.parse_args()

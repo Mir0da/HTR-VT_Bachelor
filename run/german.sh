@@ -8,6 +8,9 @@ python train.py --exp-name german \
 --max-span-length 8 \
 --img-size 1024 64 \
 --patch-size 4 16
+=======
+--patch-size 4 16 \
+>>>>>>> Stashed changes
 --proj 8 \
 --dila-ero-max-kernel 2 \
 --dila-ero-iter 1 \

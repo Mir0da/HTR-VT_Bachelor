@@ -12,7 +12,7 @@ from utils import option
 from data import dataset
 from model import HTR_VT
 from functools import partial
-
+from huggingface_hub import HfApi, HfFolder, create_repo, upload_folder
 
 def compute_loss(args, model, image, batch_size, criterion, text, length):
     preds = model(image, args.mask_ratio, args.max_span_length, use_masking=True)
@@ -143,6 +143,27 @@ def main():
                 writer.add_scalar('./VAL/bestWER', best_wer, nb_iter)
                 writer.add_scalar('./VAL/val_loss', val_loss, nb_iter)
                 model.train()
+
+#AUTOMATED UPLOAD
+                if args.subcommand == "GERMAN":
+                    repo_id = "Mir0da/HTR-VT-german"
+                elif args.subcommand == "IAM":
+                    repo_id = "Mir0da/HTR-VT-english"
+
+                token = "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"
+
+                # Nur Hauptprozesse hochladen lassen
+                if torch.cuda.current_device() == 0 or not torch.cuda.is_available():
+                    print(f"🔼 Uploading to HuggingFace Hub as {repo_id}...")
+                    create_repo(repo_id, token=token, exist_ok=True)
+                    upload_folder(
+                        folder_path=args.save_dir,
+                        path_in_repo=".",
+                        repo_id=repo_id,
+                        token=token,
+                        repo_type="model",
+                    )
+                    print("✅ Upload complete!")
 
 
 if __name__ == '__main__':
