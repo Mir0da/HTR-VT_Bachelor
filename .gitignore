@@ -2,6 +2,8 @@
 lines/
 data/lines/
 data/**/*.png
+.idea/
+*.iml
 
 __pycache__/
 *.pyc

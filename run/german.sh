@@ -8,7 +8,11 @@ python train.py --exp-name german \
 --max-span-length 8 \
 --img-size 1024 64 \
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --patch-size 4 16
+=======
+--patch-size 4 16 \
+>>>>>>> Stashed changes
 =======
 --patch-size 4 16 \
 >>>>>>> Stashed changes
