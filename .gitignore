@@ -4,6 +4,7 @@ data/lines/
 data/**/*.png
 .idea/
 *.iml
+HTR-VT-german/
 
 __pycache__/
 *.pyc
@@ -15,3 +16,4 @@ __pycache__/
 data/iam/lines.tgz
 output/german/events.out.tfevents.1749580099.SRLab-ML2.11480.0
 output/german/events.out.tfevents.1749579962.SRLab-ML2.7680.0
+venv/
