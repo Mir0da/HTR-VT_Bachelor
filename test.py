@@ -9,6 +9,7 @@ from utils import option
 from data import dataset
 from model import HTR_VT
 from collections import OrderedDict
+import pandas as pd
 
 
 def main():
@@ -40,16 +41,23 @@ def main():
     model = model.cuda()
 
     logger.info('Loading test loader...')
-    train_dataset = dataset.myLoadDS(args.train_data_list, args.data_path, args.img_size)
+    train_dataset = dataset.myLoadDS(args.train_data_list, args.train_data_path, args.img_size)
 
-    test_dataset = dataset.myLoadDS(args.test_data_list, args.data_path, args.img_size, ralph=train_dataset.ralph)
+    test_dataset = dataset.myLoadDS(args.test_data_list, args.test_data_path, args.img_size, ralph=train_dataset.ralph, filter_charset=list(train_dataset.ralph.values()))
     test_loader = torch.utils.data.DataLoader(test_dataset,
                                               batch_size=args.val_bs,
                                               shuffle=False,
                                               pin_memory=True,
                                               num_workers=args.num_workers)
 
-    converter = utils.CTCLabelConverter(train_dataset.ralph.values())
+    if args.subcommand == "GERMAN":
+        charset = list(
+            " !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz{|}°´ÄÖÜßäéöü–€\"")
+        converter = utils.CTCLabelConverter(charset)
+    else:
+        converter = utils.CTCLabelConverter(train_dataset.ralph.values())
+
+
     criterion = torch.nn.CTCLoss(reduction='none', zero_infinity=True).to(device)
 
     model.eval()
@@ -62,6 +70,19 @@ def main():
     logger.info(
         f'Test. loss : {val_loss:0.3f} \t CER : {val_cer:0.4f} \t WER : {val_wer:0.4f} ')
 
+    # Erstelle eine Tabelle aus Predictions und Ground Truth
+    results = pd.DataFrame({
+        "prediction": preds,
+        "ground_truth": labels
+    })
+
+    # Optional: falls du auch die Dateinamen speichern willst
+    if hasattr(test_dataset, "samples"):
+        results["filename"] = [os.path.basename(x[0]) for x in test_dataset.samples]
+
+    # Speichern
+    results.to_csv(os.path.join(args.save_dir, "predictions_vs_groundtruth.csv"), index=False)
+    logger.info("Saved predictions to predictions_vs_groundtruth.csv")
 
 if __name__ == '__main__':
     args = option.get_args_parser()

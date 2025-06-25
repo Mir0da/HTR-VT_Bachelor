@@ -8,7 +8,6 @@ from torch.utils.data import Dataset
 from utils import utils
 from data import transform as transform
 from torchvision.transforms import ColorJitter
-from collections import Counter
 
 
 def SameTrCollate(batch, args):
@@ -40,34 +39,12 @@ def SameTrCollate(batch, args):
     image_tensors = image_tensors / 255.
     return image_tensors, labels
 
-def filter_valid_samples(file_list, labels, valid_charset):
-    filtered_filenames = []
-    filtered_labels = []
-    for fn, label in zip(file_list, labels):
-        if all(char in valid_charset for char in label):
-            filtered_filenames.append(fn)
-            filtered_labels.append(label)
-    return filtered_filenames, filtered_labels
 
 class myLoadDS(Dataset):
-    def __init__(self, flist, dpath, img_size=[512, 32], ralph=None, fmin=True, mln=None, filter_charset=None):
+    def __init__(self, flist, dpath, img_size=[512, 32], ralph=None, fmin=True, mln=None):
         self.fns = get_files(flist, dpath)
         self.tlbls = get_labels(self.fns)
         self.img_size = img_size
-
-        if filter_charset is not None:
-            self.fns, self.tlbls = filter_valid_samples(self.fns, self.tlbls, filter_charset)
-        print(f"Loaded {len(self.fns)} samples after filtering")
-
-        problem_chars = "äöüßÄÖÜ"
-        counter = Counter()
-
-        for label in get_labels(get_files("data/german/test.ln", "data/german/lines/")):
-            for c in label:
-                if c in problem_chars:
-                    counter[c] += 1
-
-        print(counter)
 
         if ralph == None:
             alph = get_alphabet(self.tlbls)

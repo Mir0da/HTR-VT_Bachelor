@@ -1,0 +1,1 @@
+python test.py --exp-name german --img-size 1024 64 --val-bs 1 --num-workers 0 --out-dir ./saved_models GERMANTEST

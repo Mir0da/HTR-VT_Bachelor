@@ -1,0 +1,1 @@
+python test.py --exp-name english --img-size 512 64 --val-bs 1 --num-workers 0 --out-dir ./saved_models IAMTEST

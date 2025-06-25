@@ -76,10 +76,12 @@ def get_args_parser():
                      help='train data list (gc file)(ln file)')
     IAM.add_argument('--data-path', type=str, default='./data/iam/lines/',
                      help='train data list')
+    IAM.add_argument('--train-data-path', type=str, default='./data/iam/lines/')
     IAM.add_argument('--val-data-list', type=str, default='./data/iam/val.ln',
                      help='val data list')
     IAM.add_argument('--test-data-list', type=str, default='./data/iam/test.ln',
                      help='test data list')
+    IAM.add_argument('--test-data-path', type=str, default='./data/iam/lines/')
     IAM.add_argument('--nb-cls', default=80, type=int, help='nb of classes, IAM=79+1, READ2016=89+1')
 
     READ = subparsers.add_parser("READ",
@@ -124,10 +126,33 @@ def get_args_parser():
                         help='train data list')
     GERMAN.add_argument('--data-path', type=str, default='./data/german/lines/',
                         help='data path')
+    GERMAN.add_argument('--train-data-path', type=str, default='./data/german/lines/')
     GERMAN.add_argument('--val-data-list', type=str, default='./data/german/val.ln',
                         help='val data list')
     GERMAN.add_argument('--test-data-list', type=str, default='./data/german/test.ln',
                         help='test data list')
+    GERMAN.add_argument('--test-data-path', type=str, default='./data/german/lines/')
     GERMAN.add_argument('--nb-cls', default=106, type=int, help='nb of classes, GERMAN=105+1')
+
+    IAMTEST = subparsers.add_parser("IAMTEST",
+                                    description='Evaluate IAM-trained model on German test set',
+                                    help="Evaluate IAM model on German test set")
+
+    IAMTEST.add_argument('--train-data-list', type=str, default='./data/iam/train.ln')
+    IAMTEST.add_argument('--train-data-path', type=str, default='./data/iam/lines/')
+    IAMTEST.add_argument('--test-data-list', type=str, default='./data/german/test.ln')
+    IAMTEST.add_argument('--test-data-path', type=str, default='./data/german/lines/')  # beachte: deutscher Testpfad!
+    IAMTEST.add_argument('--nb-cls', default=80, type=int, help='nb of classes, IAM=79+1, READ2016=89+1')
+
+    GERMANTEST = subparsers.add_parser("GERMANTEST",
+                                       description='Evaluate German-trained model on IAM test set',
+                                       help="Evaluate German model on IAM test set")
+
+    GERMANTEST.add_argument('--train-data-list', type=str, default='./data/german/train.ln')
+    GERMANTEST.add_argument('--train-data-path', type=str, default='./data/german/lines/')
+    GERMANTEST.add_argument('--data-path', type=str, default='./data/german/lines/')
+    GERMANTEST.add_argument('--test-data-list', type=str, default='./data/iam/test.ln')
+    GERMANTEST.add_argument('--test-data-path', type=str, default='./data/iam/lines/')  # beachte: englischer Testpfad!
+    GERMANTEST.add_argument('--nb-cls', default=106, type=int, help='nb of classes, GERMAN=105+1')
 
     return parser.parse_args()
