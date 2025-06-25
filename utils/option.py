@@ -82,39 +82,26 @@ def get_args_parser():
     IAM.add_argument('--test-data-list', type=str, default='./data/iam/test.ln',
                      help='test data list')
     IAM.add_argument('--test-data-path', type=str, default='./data/iam/lines/')
-    IAM.add_argument('--nb-cls', default=80, type=int, help='nb of classes, IAM=79+1, READ2016=89+1')
+    IAM.add_argument('--nb-cls', default=80, type=int, help='nb of classes, IAM=79+1, GERMAN/IAMFULLSET=105+1')
 
-    READ = subparsers.add_parser("READ",
-                                 description='Dataset parser for training on READ',
-                                 add_help=True,
-                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                 help="Dataset parser for training on READ")
-
-    READ.add_argument('--train-data-list', type=str, default='./data/read2016/train.ln',
-                      help='train data list (gc file)(ln file)')
-    READ.add_argument('--data-path', type=str, default='./data/read2016/lines/',
-                      help='train data list')
-    READ.add_argument('--val-data-list', type=str, default='./data/read2016/val.ln',
-                      help='val data list')
-    READ.add_argument('--test-data-list', type=str, default='./data/read2016/test.ln',
-                      help='test data list')
-    READ.add_argument('--nb-cls', default=90, type=int, help='nb of classes, IAM=79+1, READ2016=89+1')
-
-    LAM = subparsers.add_parser("LAM",
-                                description='Dataset parser for training on LAM',
+    IAMFULLSET = subparsers.add_parser("IAMFULLSET",
+                                description='Dataset parser for training on IAM with full german Charset',
                                 add_help=True,
                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                help="Dataset parser for training on READ")
+                                help="Dataset parser for training on IAM with full german Charset")
 
-    LAM.add_argument('--train-data-list', type=str, default='./data/LAM/train.ln',
+    IAMFULLSET.add_argument('--train-data-list', type=str, default='./data/iam/train.ln',
                      help='train data list (gc file)(ln file)')
-    LAM.add_argument('--data-path', type=str, default='./data/LAM/lines/',
+    IAMFULLSET.add_argument('--data-path', type=str, default='./data/iam/lines/',
                      help='train data list')
-    LAM.add_argument('--val-data-list', type=str, default='./data/LAM/val.ln',
+    IAMFULLSET.add_argument('--train-data-path', type=str, default='./data/iam/lines/')
+    IAMFULLSET.add_argument('--val-data-list', type=str, default='./data/iam/val.ln',
                      help='val data list')
-    LAM.add_argument('--test-data-list', type=str, default='./data/LAM/test.ln',
+    IAMFULLSET.add_argument('--test-data-list', type=str, default='./data/iam/test.ln',
                      help='test data list')
-    LAM.add_argument('--nb-cls', default=90, type=int, help='nb of classes, IAM=79+1, READ2016=89+1')
+    IAMFULLSET.add_argument('--test-data-path', type=str, default='./data/iam/lines/')
+    IAMFULLSET.add_argument('--nb-cls', default=106, type=int, help='nb of classes, IAM=79+1, GERMAN/IAMFULLSET=105+1')
+
 
     GERMAN = subparsers.add_parser("GERMAN",
                                    description='Dataset parser for training on German handwriting',
@@ -132,7 +119,7 @@ def get_args_parser():
     GERMAN.add_argument('--test-data-list', type=str, default='./data/german/test.ln',
                         help='test data list')
     GERMAN.add_argument('--test-data-path', type=str, default='./data/german/lines/')
-    GERMAN.add_argument('--nb-cls', default=106, type=int, help='nb of classes, GERMAN=105+1')
+    GERMAN.add_argument('--nb-cls', default=106, type=int, help='nb of classes, IAM=79+1, GERMAN/IAMFULLSET=105+1')
 
     IAMTEST = subparsers.add_parser("IAMTEST",
                                     description='Evaluate IAM-trained model on German test set',

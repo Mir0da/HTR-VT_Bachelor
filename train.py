@@ -68,7 +68,7 @@ def main():
 
     optimizer = sam.SAM(model.parameters(), torch.optim.AdamW, lr=1e-7, betas=(0.9, 0.99), weight_decay=args.weight_decay)
     criterion = torch.nn.CTCLoss(reduction='none', zero_infinity=True)
-    if args.subcommand == "GERMAN":
+    if args.subcommand in ["GERMAN", "IAMFULLSET"]:
         charset = list(" !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz{|}°´ÄÖÜßäéöü–€\"")
         converter = utils.CTCLabelConverter(charset)
     else:
@@ -149,8 +149,15 @@ def main():
                     repo_id = "Mir0da/HTR-VT-german"
                 elif args.subcommand == "IAM":
                     repo_id = "Mir0da/HTR-VT-english"
+                elif args.subcommand == "IAMFULLSET":
+                    repo_id = "Miroda/HTR-VT-englisch-fullCharset"
+                else:
+                    repo_id = None  # fallback: kein Upload
 
-                token = "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"
+                if args.subcommand == "IAMFULLSET":
+                    token = "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"
+                else:
+                    token = "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"
 
                 # Nur Hauptprozesse hochladen lassen
                 if torch.cuda.current_device() == 0 or not torch.cuda.is_available():
