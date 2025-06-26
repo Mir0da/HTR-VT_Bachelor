@@ -50,7 +50,7 @@ def main():
                                               pin_memory=True,
                                               num_workers=args.num_workers)
 
-    if args.subcommand == "GERMAN":
+    if args.subcommand in ["GERMAN", "GERMANTEST"]:
         charset = list(
             " !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz{|}°´ÄÖÜßäéöü–€\"")
         converter = utils.CTCLabelConverter(charset)

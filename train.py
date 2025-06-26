@@ -159,18 +159,20 @@ def main():
                 else:
                     token = "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"
 
-                # Nur Hauptprozesse hochladen lassen
-                if torch.cuda.current_device() == 0 or not torch.cuda.is_available():
-                    print(f"🔼 Uploading to HuggingFace Hub as {repo_id}...")
-                    create_repo(repo_id, token=token, exist_ok=True)
-                    upload_folder(
-                        folder_path=args.save_dir,
-                        path_in_repo=".",
-                        repo_id=repo_id,
-                        token=token,
-                        repo_type="model",
-                    )
-                    print("✅ Upload complete!")
+                if repo_id is not None and (torch.cuda.current_device() == 0 or not torch.cuda.is_available()):
+                    try:
+                        print(f"🔼 Uploading to HuggingFace Hub as {repo_id}...")
+                        create_repo(repo_id, token=token, exist_ok=True)
+                        upload_folder(
+                            folder_path=args.save_dir,
+                            path_in_repo=".",
+                            repo_id=repo_id,
+                            token=token,
+                            repo_type="model",
+                        )
+                        print("✅ Upload complete!")
+                    except Exception as e:
+                        print(f"⚠️ Upload failed: {e}. Training continues.")
 
 
 if __name__ == '__main__':
