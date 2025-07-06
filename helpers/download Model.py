@@ -1,10 +1,13 @@
 from huggingface_hub import hf_hub_download, list_repo_files
+from huggingface_hub import whoami
+
 
 # Liste aller Dateien im Repo anzeigen
-repo_id = "Mir0da/HTR-VT-german"
-local_dir = "../saved_models/german"
+repo_id = "Miroda/HTR-VT-englisch-fullCharset"
+local_dir = "../saved_models/english_fullset"
 repo_type = "model"
-
+token = "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"
+print(whoami(token=token))
 # Alle gewünschten Dateien gezielt herunterladen
 files_to_download = [
     "best_CER.pth",
@@ -18,7 +21,8 @@ for filename in files_to_download:
         repo_id=repo_id,
         filename=filename,
         local_dir=local_dir,
-        repo_type=repo_type
+        repo_type=repo_type,
+        token=token
     )
 
 # Dynamische Suche nach TensorBoard event-Dateien

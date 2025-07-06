@@ -17,4 +17,6 @@ data/iam/lines.tgz
 output/german/events.out.tfevents.1749580099.SRLab-ML2.11480.0
 output/german/events.out.tfevents.1749579962.SRLab-ML2.7680.0
 venv/
-saved_models/
+saved_models/**/*.pth
+preparation_validation/cache
+/output/

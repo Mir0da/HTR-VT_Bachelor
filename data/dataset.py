@@ -57,17 +57,17 @@ class myLoadDS(Dataset):
 
         if filter_charset is not None:
             self.fns, self.tlbls = filter_valid_samples(self.fns, self.tlbls, filter_charset)
-        print(f"Loaded {len(self.fns)} samples after filtering")
+            print(f"Loaded {len(self.fns)} samples after filtering")
 
-        problem_chars = "äöüßÄÖÜ"
-        counter = Counter()
+            problem_chars = "äöüßÄÖÜ"
+            counter = Counter()
 
-        for label in get_labels(get_files("data/german/test.ln", "data/german/lines/")):
-            for c in label:
-                if c in problem_chars:
-                    counter[c] += 1
+            for label in get_labels(get_files("data/german/test.ln", "data/german/lines/")):
+                for c in label:
+                    if c in problem_chars:
+                        counter[c] += 1
 
-        print(counter)
+            print(counter)
 
         if ralph == None:
             alph = get_alphabet(self.tlbls)
