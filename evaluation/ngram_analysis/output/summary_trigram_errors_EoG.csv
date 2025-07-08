@@ -1,0 +1,4 @@
+category,total_errors,affected_samples,relative_frequency (%)
+english-dominant,281,165,3.59
+german-dominant,4093,544,52.35
+neutral,3445,551,44.06

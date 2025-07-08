@@ -9,7 +9,7 @@ import valid
 from utils import utils
 from utils import sam
 from utils import option
-from data import dataset_train
+from data import dataset
 from model import HTR_VT
 from functools import partial
 from huggingface_hub import HfApi, HfFolder, create_repo, upload_folder
@@ -49,17 +49,17 @@ def main():
     model.zero_grad()
 
     logger.info('Loading train loader...')
-    train_dataset = dataset_train.myLoadDS(args.train_data_list, args.data_path, args.img_size)
+    train_dataset = dataset.myLoadDS(args.train_data_list, args.data_path, args.img_size)
     train_loader = torch.utils.data.DataLoader(train_dataset,
                                                batch_size=args.train_bs,
                                                shuffle=True,
                                                pin_memory=True,
                                                num_workers=args.num_workers,
-                                               collate_fn=partial(dataset_train.SameTrCollate, args=args))
-    train_iter = dataset_train.cycle_data(train_loader)
+                                               collate_fn=partial(dataset.SameTrCollate, args=args))
+    train_iter = dataset.cycle_data(train_loader)
 
     logger.info('Loading val loader...')
-    val_dataset = dataset_train.myLoadDS(args.val_data_list, args.data_path, args.img_size, ralph=train_dataset.ralph)
+    val_dataset = dataset.myLoadDS(args.val_data_list, args.data_path, args.img_size, ralph=train_dataset.ralph)
     val_loader = torch.utils.data.DataLoader(val_dataset,
                                              batch_size=args.val_bs,
                                              shuffle=False,
@@ -68,7 +68,7 @@ def main():
 
     optimizer = sam.SAM(model.parameters(), torch.optim.AdamW, lr=1e-7, betas=(0.9, 0.99), weight_decay=args.weight_decay)
     criterion = torch.nn.CTCLoss(reduction='none', zero_infinity=True)
-    if args.subcommand in ["GERMAN"]:
+    if args.subcommand in ["GERMAN", "IAMFULLSET"]:
         charset = list(" !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz{|}°´ÄÖÜßäéöü–€\"")
         converter = utils.CTCLabelConverter(charset)
     else:
@@ -149,10 +149,15 @@ def main():
                     repo_id = "Mir0da/HTR-VT-german"
                 elif args.subcommand == "IAM":
                     repo_id = "Mir0da/HTR-VT-english"
+                elif args.subcommand == "IAMFULLSET":
+                    repo_id = "Miroda/HTR-VT-englisch-fullCharset"
                 else:
-                    repo_id = None  # fallback: no Upload
+                    repo_id = None  # fallback: kein Upload
 
-                token = "xxx"       #deleted due to data safety
+                if args.subcommand == "IAMFULLSET":
+                    token = "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"
+                else:
+                    token = "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"
 
                 if repo_id is not None and (torch.cuda.current_device() == 0 or not torch.cuda.is_available()):
                     try:

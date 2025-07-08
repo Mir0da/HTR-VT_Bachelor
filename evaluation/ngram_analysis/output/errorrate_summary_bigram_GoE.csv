@@ -1,0 +1,4 @@
+category,mean_error_rate,median_error_rate,number_of_ngrams
+english-dominant,0.3383752293577982,0.3333,109
+german-dominant,0.3300822222222222,0.28,45
+neutral,0.2962107569721116,0.2652,251

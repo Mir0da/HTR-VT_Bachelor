@@ -47,8 +47,8 @@ def summarize_ngram_errors(tagged_csv_path, output_csv_path=None):
 
 
 if __name__ == "__main__":
-    input_path = "output/tagged_bigram_errors.csv"
-    output_path = "output/summary_bigram_errors.csv"
+    input_path = "output/tagged_trigram_errors_GoE.csv"
+    output_path = "output/summary_trigram_errors_GoE.csv"
 
     summary_df = summarize_ngram_errors(input_path, output_path)
     print(summary_df)

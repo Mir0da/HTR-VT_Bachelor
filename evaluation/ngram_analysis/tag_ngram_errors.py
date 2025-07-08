@@ -47,12 +47,14 @@ def tag_ngrams(aligned_csv_path, ngram_dict, n=2):
     return pd.DataFrame(tagged)
 
 if __name__ == "__main__":
-    aligned_path = "output/aligned_predictions.csv"
-    ngram_csv = "../../preparation_validation/output/ngram_analysis_2gram.csv"
-    output_path = "output/tagged_bigram_errors.csv"
+    aligned_path = "output/aligned_predictions_EoG.csv"
+    ngram_csv = "../../preparation_validation/output/ngram_analysis_3gram.csv"
+    output_path = "output/tagged_trigram_errors_EoG.csv"
+
 
     ngram_dict = load_ngram_dict(ngram_csv)
-    tagged_df = tag_ngrams(aligned_path, ngram_dict, n=2) #carefull to also change n!
+    tagged_df = tag_ngrams(aligned_path, ngram_dict, n=3) #carefull to also change n!
     tagged_df.to_csv(output_path, index=False)
     print(f"✔ Tagged n-gram errors saved to: {output_path}")
+
 

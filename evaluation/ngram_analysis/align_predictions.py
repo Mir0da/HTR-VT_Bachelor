@@ -27,10 +27,11 @@ def align_predictions(csv_path, output_path):
     out_df.to_csv(output_path, index=False)
 
 if __name__ == "__main__":
-    input_path = "example_predictions_vs_groundtruth.csv"  # Path to example file
-    output_path = "output/aligned_predictions.csv"
-    os.makedirs("output", exist_ok=True)
+    input_path = "../../saved_models/german/predictions_vs_groundtruth_GoE.csv"  # Path to example file
+    output_path = "output/aligned_predictions_GoE.csv"
+    os.makedirs("output_example", exist_ok=True)
 
     align_predictions(input_path, output_path)
     print(f"✔ Aligned predictions saved to: {output_path}")
+
 
