@@ -6,7 +6,6 @@ from huggingface_hub import whoami
 repo_id = "Miroda/HTR-VT-englisch-fullCharset"
 local_dir = "../saved_models/english_fullset"
 repo_type = "model"
-token = "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"
 print(whoami(token=token))
 # Alle gewünschten Dateien gezielt herunterladen
 files_to_download = [
