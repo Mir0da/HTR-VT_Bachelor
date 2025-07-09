@@ -14,4 +14,4 @@ matplotlib
 tqdm
 datasets
 pyyaml
-huggingface_hub
+huggingface-hub
