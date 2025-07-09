@@ -1,75 +1,53 @@
-# 📙 HTR-VT (Pattern Recognition)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/htr-vt-handwritten-text-recognition-with/handwritten-text-recognition-on-lam-line)](https://paperswithcode.com/sota/handwritten-text-recognition-on-lam-line?p=htr-vt-handwritten-text-recognition-with)
+# 📙 HTR-VT - Bachelor
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/htr-vt-handwritten-text-recognition-with/handwritten-text-recognition-on-read2016-line)](https://paperswithcode.com/sota/handwritten-text-recognition-on-read2016-line?p=htr-vt-handwritten-text-recognition-with)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/htr-vt-handwritten-text-recognition-with/handwritten-text-recognition-on-iam-line)](https://paperswithcode.com/sota/handwritten-text-recognition-on-iam-line?p=htr-vt-handwritten-text-recognition-with)
 ### Introduction
-This is the official implementation of our **Pattern Recognition(PR)** 2025 paper *"HTR-VT: Handwritten Text Recognition with Vision Transformer".* It's a new and effective baseline for handwritten text recognition solely using Vision Transformer and CTC Loss. 
+This is the corresponding GitHub of the bachelor thesis "Comparison of language-specific HTR models" by Sophie Zach, Media Systems, HAW Hamburg
 
-[[Project Page]](https://yutingli0606.github.io/HTR-VT/)
-[[Paper]](https://www.sciencedirect.com/science/article/abs/pii/S0031320324007180)
-[[arXiv]](https://arxiv.org/pdf/2409.08573) 
-[[Google Drive]](https://drive.google.com/drive/folders/1mGX9Dk7RBY5BKbqHnxwsHtCnX-SuH363?usp=sharing)
+The code is based on the work of Li et al.(2024) ["HTR-VT: Handwritten text recognition with vision transformer"](https://arxiv.org/pdf/2409.08573), to be found at this GitHub: https://github.com/YutingLi0606/HTR-VT.
 
 
 ## Table of Content
-* [1. Overview](#1-overview)
-* [2. Visual Results](#2-visual-results)
-* [3. Installation](#3-installation)
-* [4. Quick Start](#4-quick-start)
-* [5. Citation](#5-citation)
-* [6. Acknowledgement](#6-acknowledgement)
+* [1. Installation](#3-installation)
+* [2. Quick Start](#4-quick-start)
 
-## 1. Overview
-<p align="center">
-<img src="img/HTR-VT.png" width="500px" alt="teaser">
-</p>
 
-## 2. Visual Results
-<p align="center">
-<img src="img/visual.png" width="900px" alt="method">
-</p>
 
 ## 3. Installation
 
 ### 3.1. Environment
 
-Our model can be learnt in a **single GPU RTX-4090 24G**
+This model can be learnt on a **single GPU RTX-4090 24G**
 ```bash
-conda env create -f environment.yml
-conda activate htr
-```
+python -m venv venv
+venv\Scripts\activate    	# Windows
+source venv/bin/activate   # Linux/macOS
 
-The code was tested on Python 3.9 and PyTorch 1.13.0.
+pip install -r requirements_uni.txt --extra-index-url https://download.pytorch.org/whl/cu118
+```
 
 
 ### 3.2. Datasets
 
-* Using **IAM, READ2016 and LAM** for handwritten text recognition.
-
-</summary>
+* Using **IAM, fhswf/german_handwriting** for handwritten text recognition.
   <details>
    <summary>
    IAM
    </summary>
+
+        Register at the FKI's webpage :https://fki.tic.heia-fr.ch/databases/iam-handwriting-database
     
-    Register at the FKI's webpage :https://fki.tic.heia-fr.ch/databases/iam-handwriting-database)
-    Download the dataset from here :https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database
-  </details>
-  <details>
-   <summary>
-   READ2016
-   </summary>
-    
-    wget https://zenodo.org/record/1164045/files/{Test-ICFHR-2016.tgz,Train-And-Val-ICFHR-2016.tgz}
-  </details>
-  <details>
-   <summary>
-   LAM
-   </summary>
-    
-    Download the dataset from here: https://aimagelab.ing.unimore.it/imagelab/page.asp?IdPage=46
+        Download the dataset from here :https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database
+    </details>
+    <details>
+     <summary>
+     fhswf/german_handwriting
+     </summary>
+
+    Download the dataset from here: https://huggingface.co/datasets/fhswf/german_handwriting using:
+
+        from datasets import load_dataset
+
+        dataset = load_dataset('fhswf/german_handwriting')
   </details>
   
 * Download datasets to ./data/.
@@ -91,22 +69,4 @@ The structure of the file should be:
 
 
 ## 4. Quick Start
-* We provide convenient and comprehensive commands in ./run/ to train and test on different datasets to help researchers reproducing the results of the paper.
-
-## 5. Citation
-If our project is helpful for your research, please consider citing :
-```
-@article{li2025htr,
-  title={HTR-VT: Handwritten text recognition with vision transformer},
-  author={Li, Yuting and Chen, Dexiong and Tang, Tinglong and Shen, Xi},
-  journal={Pattern Recognition},
-  volume={158},
-  pages={110967},
-  year={2025},
-  publisher={Elsevier}
-}
-```
-
-## 6. Acknowledgement
-
-We appreciate helps from public code: [VAN](https://github.com/FactoDeepLearning/VerticalAttentionOCR) and [OrigamiNet](https://github.com/IntuitionMachines/OrigamiNet).  
+* The commands used for training are available in ./run/ to train and test on different datasets to help researchers reproducing the results of the paper.
