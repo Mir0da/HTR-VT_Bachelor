@@ -22,3 +22,5 @@ preparation_validation/cache
 /output/
 FullsetStuff/english_fullset_Model/best_CER.pth
 FullsetStuff/english_fullset_Model/best_WER.pth
+/output/iamfullset
+/output/iamfullset
