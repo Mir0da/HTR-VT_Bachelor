@@ -25,7 +25,11 @@ source venv/bin/activate   # Linux/macOS
 pip install -r requirements_uni.txt --extra-index-url https://download.pytorch.org/whl/cu118
 ```
 
+The trained models can be downloaded here:\
+English: https://huggingface.co/Mir0da/HTR-VT-english \
+German: https://huggingface.co/Mir0da/HTR-VT-german
 
+to run the test_X.sh commands without futher preparation, download the models to /saved_models using download_Model.py
 ### 3.2. Datasets
 
 * Using **IAM, fhswf/german_handwriting** for handwritten text recognition.
